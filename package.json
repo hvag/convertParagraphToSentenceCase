@@ -1,6 +1,6 @@
 {
   "name": "convertparagraphtosentencecase",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Convert a Paragraph to Sentence Case",
   "main": "src/index.js",
   "scripts": {
@@ -17,5 +17,7 @@
     "case"
   ],
   "author": "m.shaw",
+  "email": "advisor@hvadvisorygroup.com",
+  "homepage": "https://github.com/hvag/convertParagraphToSentenceCase",
   "license": "MIT"
 }

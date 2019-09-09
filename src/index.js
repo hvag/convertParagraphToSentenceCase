@@ -34,13 +34,11 @@ const pipe = (...funcs) => (initialValue) => funcs.reduce(reducer, initialValue)
 const reducer = (accumulator, currentFunc) => currentFunc(accumulator)
 
 // Create pipe and execute with initial value of text
-const convertParagraphToSentenceCase = text => pipe(
+module.exports = text => pipe(
     createArrayOfSentences,
     convertToLowerCase,
     convertFirstCharToUpperCase,
     joinSentences
 )(text)
 
-// console.log(convertParagraphToSentenceCase(`THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG. IT BARKED.`))
-
-module.exports = { convertParagraphToSentenceCase }
+// console.log(convertParagraphToSentenceCase('THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG. IT BARKED.'))
