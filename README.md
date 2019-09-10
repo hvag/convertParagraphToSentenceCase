@@ -13,7 +13,9 @@ npm i convertparagraphtosentencecase --save
 ```javascript
 const convert = require('convertparagraphtosentencecase')
 
-convert('STRING TEST.')   // => 'String test.'
+convert('STRING TEST.')     // => 'String test.'
+convert('string test.')     // => 'String test.'
+convert('StRiNg TeSt.')     // => 'String test.'
 ```
 
 ## License
