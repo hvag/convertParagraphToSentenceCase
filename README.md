@@ -10,7 +10,7 @@ npm i convertparagraphtosentencecase --save
 ```
 
 ## Usage
-```javascript
+```node
 const convert = require('convertparagraphtosentencecase')
 
 convert('STRING TEST.')     // => 'String test.'

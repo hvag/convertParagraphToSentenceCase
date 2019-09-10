@@ -1,11 +1,13 @@
 {
   "name": "convertparagraphtosentencecase",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Convert a Paragraph to Sentence Case",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "mocha src/index.test --watch",
-    "test:single": "nyc --reporter=html --reporter=text mocha src/index.test"
+    "watch:test": "mocha src/index.test --watch",
+    "test": "nyc --reporter=html --reporter=text mocha src/index.test",
+    "prebuild": "rimraf dist",
+    "build": "babel --ignore *.test.js --out-dir dist src"
   },
   "repository": {
     "type": "git",
@@ -17,15 +19,28 @@
     "sentence",
     "case"
   ],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "author": "m.shaw",
   "email": "advisor@hvadvisorygroup.com",
   "homepage": "https://github.com/hvag/convertParagraphToSentenceCase",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2016": "^6.24.1",
     "chai": "^4.2.0",
     "istanbul": "^0.4.5",
     "mocha": "^6.2.0",
-    "nyc": "^14.1.1"
+    "nyc": "^14.1.1",
+    "rimraf": "^3.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "babel": {
+    "presets": [
+      "es2016"
+    ]
+  }
 }

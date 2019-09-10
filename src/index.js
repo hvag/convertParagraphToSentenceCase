@@ -40,5 +40,3 @@ module.exports = text => pipe(
     convertFirstCharToUpperCase,
     joinSentences
 )(text)
-
-// console.log(convertParagraphToSentenceCase('THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG. IT BARKED.'))
