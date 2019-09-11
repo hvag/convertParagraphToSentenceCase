@@ -5,6 +5,7 @@ const createArrayOfSentences = text => {
     // ^ -> . | ? | ! | $
 
     var regex = /\(?[^\.\?!]+[\.\?!]+\)?|\(?[^\.\?!]+$/g
+    if (!text.match(regex)) return ['']
     return text.match(regex)
 
 }

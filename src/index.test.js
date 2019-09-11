@@ -14,6 +14,12 @@ describe('converts paragraph to sentence case', () => {
         expect(convert('THE quick brown fox JUMPS OvEr ThE lAzY DOG. IT BarkeD! REALLY?')).to.equal
             ('The quick brown fox jumps over the lazy dog. It barked! Really?')
     })
+    it('should not fail given a zero length paragraph', () => {
+        expect(convert('')).to.equal('')
+        expect(convert('.')).to.equal('')
+        expect(convert('!')).to.equal('')
+        expect(convert('?')).to.equal('')
+    })
 })
 describe.skip('resolves edge cases', () => {
     it('should convert decimal numbers', () => {
